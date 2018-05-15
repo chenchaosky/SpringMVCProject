@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-aop-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-aspects-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-beans-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-context-4.3.3.RELEASE.jar" sourcepath="D:/SourceCode/MavenRepository/repository/org/springframework/spring-context/4.3.3.RELEASE/spring-context-4.3.3.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-context-support-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-core-4.3.3.RELEASE.jar" sourcepath="D:/SourceCode/MavenRepository/repository/org/springframework/spring-core/4.3.3.RELEASE/spring-core-4.3.3.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-expression-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-instrument-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-instrument-tomcat-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-jdbc-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-jms-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-jms-4.3.3.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-jms-4.3.3.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-messaging-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-orm-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-oxm-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-test-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-tx-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-web-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-webmvc-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-webmvc-portlet-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-websocket-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/aspectj/aspectjrt-1.8.9.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/aspectj/aspectjweaver-1.8.9.jar"/>
+	<classpathentry kind="lib" path="D:/SourceCode/MavenRepository/repository/cglib/cglib/3.2.4/cglib-3.2.4.jar"/>
+	<classpathentry kind="lib" path="D:/SourceCode/MavenRepository/repository/org/jboss/jboss-vfs/3.2.12.Final/jboss-vfs-3.2.12.Final.jar"/>
+	<classpathentry kind="lib" path="D:/SourceCode/MavenRepository/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-context-support-4.3.3.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="D:/SoftwareBackup/JAVA/spring-framework-4.3.3.RELEASE/libs/spring-context-support-4.3.3.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="D:/SourceCode/MavenRepository/repository/javax/mail/javax.mail-api/1.5.6/javax.mail-1.5.6.jar"/>
+	<classpathentry kind="lib" path="D:/SourceCode/MavenRepository/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/SourceCode/MavenRepository/repository/com/google/guava/guava/21.0/guava-21.0.jar"/>
+	<classpathentry kind="lib" path="D:/SourceCode/MavenRepository/repository/junit/junit/4.12/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="D:/SourceCode/MavenRepository/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="D:/SourceCode/MavenRepository/repository/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar"/>
+	<classpathentry kind="lib" path="D:/SourceCode/MavenRepository/repository/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

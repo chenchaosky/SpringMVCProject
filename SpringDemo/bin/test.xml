@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop"
+  xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+  xmlns:cache="http://www.springframework.org/schema/cache" xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+     http://www.springframework.org/schema/aop
+     http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+     http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context-4.3.xsd
+     http://www.springframework.org/schema/tx
+     http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+     http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-4.0.xsd">
+     
+     <bean id="resourceBean" class="demo.Resource.ResourceBean">
+        <!-- value: path is relative to the root path of src.  -->
+     	<property name="resource" value="resources/test.properties"/>
+     </bean>
+     
+     <bean id="resourceBean1" class="demo.Resource.ResourceBeanMultil">
+       <property name="resources">
+           <array>
+             <value>demo/Resource/test_alt.properties</value>
+             <value>test.properties</value>
+           </array>
+       </property>
+     </bean>
+     <bean id="resourceBean2" class="demo.Resource.ResourceBeanMultil">
+       <property name="resources" value="classpath*:META-INF/INDEX.LIST"/>
+     </bean>
+     <bean id="resourceBean3" class="demo.Resource.ResourceBeanMultil">
+       <property name="resources">
+           <array>
+             <value>demo/Resource/test_alt.properties</value>
+             <value>classpath*:META-*/INDEX.LIST</value>
+           </array>
+       </property>
+     </bean>
+     </beans>

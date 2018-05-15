@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+     
+     <!-- Object -->
+     <bean id="aopDemoService" class="demo.AopSchema.AopDemoService"/>
+     
+     <!-- Aspect -->
+     <bean id="aopAspect" class="demo.AopSchema.AopAspect"/>
+     
+     <bean id="beforeAdvice" class="demo.AopSchema.BeforeAdvice"/>
+     
+     <!-- Pointcut -->
+     <aop:config>
+     	<aop:pointcut id="pointCut1" expression="execution(* demo.AopSchema.*.helloService(..)) and args(para1,para2)"/>
+     	<aop:advisor pointcut="execution(* demo.AopSchema.*.helloService(..))" advice-ref="beforeAdvice"/>
+        <aop:aspect id="asp1" ref="aopAspect">
+             <aop:after-returning pointcut="execution(* demo.AopSchema.*.helloService(..))" 
+                                  method="afterReturningInstance" 
+                                  arg-names="retVal"
+                                  returning="retVal"/>
+                                  
+             <aop:before pointcut-ref="pointCut1" 
+                                  method="beforeInstance(java.lang.String,java.lang.String)" 
+                                  arg-names="para1,para2"/>
+                              
+             <aop:around pointcut="execution(* demo.AopSchema.*.listService(..)) and args(para)" 
+                         method="aroundService" 
+                         arg-names="para"/>
+                         
+             <aop:after pointcut="execution(* demo.AopSchema.*.helloTest(*)) and args(para)"
+                        method="afterFinallyAdvice(java.lang.String)"
+                        arg-names="para"/>
+                        
+        </aop:aspect>
+     </aop:config>
+    
+     </beans>
