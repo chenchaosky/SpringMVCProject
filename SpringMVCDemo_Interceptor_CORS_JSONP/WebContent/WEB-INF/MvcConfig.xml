@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+						
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop-4.3.xsd 
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd 
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-4.3.xsd 
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd ">
+    
+    <!-- 获取properties文件中的值, 通过@Value获取-->  
+	<bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">  
+		<property name="locations">  
+			<list>  
+				<value>classpath:DomainSpan.properties</value>  
+			</list>  
+		</property>  
+	</bean>  
+	<!-- Spring的动态变量,能在bean中直接调用 -->   
+	<bean id="propertyPlaceholderConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">  
+	    <property name="properties" ref="configProperties" />  
+	</bean>  
+ 
+    <context:component-scan base-package="com.sydney.au.*"/> 
+     
+    <mvc:view-controller path="/" view-name="forward:/WEB-INF/jsp/welcome.jsp"/>  
+    
+    <mvc:resources location="js/" mapping="js/**"/>
+     
+    <bean id="viewResolver1" class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
+        <property name="prefix" value="/WEB-INF/jsp/" />  
+        <property name="suffix" value=".jsp" />  
+    </bean>  
+
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<!-- 匹配的是url路径，如果不配置或/**, 将拦截所有的请求-->  
+			<mvc:mapping path="/**"/>
+			<!--自定义拦截器注册--> 
+			<bean class="com.sydney.au.interceptor.LoginInterceptor"/>
+		</mvc:interceptor>
+ 		<!-- 我们可以直接在此注册自定义拦截器Bean来配置全局拦截器，会对所有请求拦截--> 
+	</mvc:interceptors>
+	
+    <mvc:annotation-driven/>
+
+</beans>
+     
